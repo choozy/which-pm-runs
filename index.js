@@ -8,8 +8,8 @@ module.exports = function () {
 }
 
 function pmFromUserAgent (userAgent) {
-  const pmSpec = userAgent.split(' ')[0]
-  const separatorPos = pmSpec.lastIndexOf('/')
+  var pmSpec = userAgent.split(' ')[0]
+  var separatorPos = pmSpec.lastIndexOf('/')
   return {
     name: pmSpec.substr(0, separatorPos),
     version: pmSpec.substr(separatorPos + 1)
